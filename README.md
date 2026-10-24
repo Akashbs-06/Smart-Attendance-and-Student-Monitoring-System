@@ -1,77 +1,167 @@
+<div align="center">
 
-# Smart Attendance and Student Monitoring System
+# 🎓 ClassSentinel AI
 
-An AI-powered classroom monitoring system that automates student attendance using face recognition and monitors classroom activities using computer vision.
+### Smart Attendance & Student Monitoring System
 
-## 📌 Project Overview
+**Making classrooms smarter through computer vision and intelligent monitoring.**
 
-The **Smart Attendance and Student Monitoring System** is designed to simplify classroom attendance management and improve student monitoring. It uses computer vision and deep learning techniques to identify students, detect mobile phone usage, monitor drowsiness, and generate engagement scores.
+An AI-powered classroom monitoring solution combining face recognition, object detection, and facial landmark analysis to support automated attendance and classroom activity monitoring.
 
-The system provides a web-based dashboard for teachers and administrators to monitor classroom activity, review attendance records, view alerts, and generate reports.
+<br>
 
-## ✨ Key Features
+[![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python\&logoColor=white)](https://www.python.org/)
+[![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?logo=opencv\&logoColor=white)](https://opencv.org/)
+[![YOLOv8](https://img.shields.io/badge/YOLOv8-Object%20Detection-purple)](https://docs.ultralytics.com/)
+[![Flask](https://img.shields.io/badge/Flask-Backend-black?logo=flask)](https://flask.palletsprojects.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-Database-blue?logo=sqlite\&logoColor=white)](https://www.sqlite.org/)
 
-* **Automated Attendance:** Detects and recognizes enrolled students using face recognition.
-* **Face Detection:** Uses OpenCV YuNet for face detection.
-* **Face Recognition:** Uses OpenCV SFace for identifying registered students.
-* **Mobile Phone Detection:** Uses YOLOv8 to detect mobile phone usage in the classroom.
-* **Drowsiness Detection:** Uses MediaPipe Face Mesh and Eye Aspect Ratio (EAR) to identify potential drowsiness.
-* **Real-Time Alerts:** Generates alerts for detected mobile phone usage and drowsiness.
-* **Engagement Score:** Calculates student engagement using attendance and classroom monitoring events.
-* **Web Dashboard:** Provides an interface for classroom monitoring and reviewing events.
-* **Attendance Reports:** Supports attendance analysis and PDF report generation.
-* **Database Management:** Uses SQLite for local data storage.
-* **Camera Integration:** Supports camera input, including a compatible Android phone webcam application.
+**[Explore Repository](https://github.com/Akashbs-06/Smart-Attendance-and-Student-Monitoring-System) · [Report a Bug](https://github.com/Akashbs-06/Smart-Attendance-and-Student-Monitoring-System/issues)**
 
-## 🛠️ Technologies Used
+</div>
 
-| Technology               | Purpose                                                                      |
-| ------------------------ | ---------------------------------------------------------------------------- |
-| Python                   | Main programming language                                                    |
-| OpenCV                   | Image processing and computer vision                                         |
-| YuNet                    | Face detection                                                               |
-| SFace                    | Face recognition                                                             |
-| YOLOv8                   | Mobile phone detection                                                       |
-| MediaPipe Face Mesh      | Facial landmark detection                                                    |
-| NumPy                    | Numerical operations                                                         |
-| Flask                    | Backend web server and APIs                                                  |
-| Flask-CORS               | Cross-origin communication                                                   |
-| SQLite                   | Database management                                                          |
-| HTML, CSS and JavaScript | Web interface                                                                |
-| Chart.js                 | Charts and analytics                                                         |
-| FPDF2                    | PDF report generation                                                        |
-| React.js                 | Frontend technology planned or used, depending on the current implementation |
+---
 
-## 🏗️ System Modules
+## 💡 The Idea Behind ClassSentinel AI
 
-### 1. Face Detection and Recognition
+Traditional attendance methods consume valuable classroom time and often require teachers to manage records manually. At the same time, monitoring classroom activities individually can be challenging.
 
-Detects faces from camera frames and compares them with enrolled student data to automate attendance recording.
+**ClassSentinel AI** explores how computer vision can help address these challenges through an integrated monitoring system.
 
-### 2. Mobile Phone Detection
+The project brings together student face recognition, mobile phone detection, drowsiness indicators, event tracking, and attendance reporting in one application.
 
-Uses the YOLOv8 model to identify mobile phones in classroom camera frames and records relevant detection events.
+The objective is to help educators access useful classroom information while reducing repetitive administrative work.
 
-### 3. Drowsiness Detection
+## ✨ What Makes It Different?
 
-Uses MediaPipe Face Mesh to identify facial landmarks and calculate the Eye Aspect Ratio (EAR). The system can flag potential drowsiness based on the implemented detection conditions.
+Rather than focusing only on attendance, this project combines several computer vision capabilities.
 
-### 4. Engagement Score
+| Capability                | Technology                   | Purpose                                                               |
+| ------------------------- | ---------------------------- | --------------------------------------------------------------------- |
+| 👤 Face detection         | OpenCV YuNet                 | Locate faces in camera frames                                         |
+| 🪪 Face recognition       | OpenCV SFace                 | Identify enrolled students                                            |
+| 📱 Phone detection        | YOLOv8                       | Detect mobile phones in classroom images                              |
+| 👁️ Drowsiness indicators | MediaPipe Face Mesh          | Analyze facial landmarks and eye-related measurements                 |
+| 📊 Engagement estimation  | Application logic            | Estimate engagement using configured attendance and monitoring events |
+| 🔔 Event alerts           | Python and application logic | Generate alerts for configured monitoring events                      |
+| 🗃️ Data management       | SQLite                       | Store application data locally                                        |
+| 🌐 Backend services       | Flask                        | Handle application requests and monitoring operations                 |
+| 📑 Reporting              | FPDF2                        | Generate PDF reports                                                  |
 
-Combines attendance information and monitoring events to estimate student engagement.
+*Detection accuracy depends on camera conditions, model performance, and application configuration. Engagement estimates are indicators, not definitive measurements of student attention.*
 
-### 5. Backend and Database
+## 🚀 Core Features
 
-The Flask backend manages application requests and monitoring events. SQLite stores application data locally.
+### 1. Intelligent Attendance
 
-### 6. Dashboard and Reports
+* Detects faces from camera frames.
+* Uses face recognition to identify enrolled students.
+* Supports automated attendance recording.
+* Organizes attendance information for later review.
 
-Provides a web interface for reviewing attendance, monitoring events, analytics, alerts, and generated reports.
+### 2. Classroom Phone Detection
 
-## 📂 Project Structure
+* Uses YOLOv8 for mobile phone detection.
+* Supports recording relevant detection events.
+* Can generate alerts according to configured detection rules.
+
+### 3. Drowsiness Monitoring
+
+* Uses MediaPipe Face Mesh to identify facial landmarks.
+* Calculates the Eye Aspect Ratio (EAR) where implemented.
+* Supports identifying potential drowsiness indicators.
+* Can trigger alerts when configured conditions are satisfied.
+
+> Drowsiness detection is an approximate computer vision indicator, not a medical diagnosis.
+
+### 4. Engagement Estimation
+
+The application combines configured attendance information and classroom monitoring events to estimate engagement.
+
+The resulting score should be interpreted as an application-defined indicator rather than an objective measurement of learning or attention.
+
+### 5. Monitoring Dashboard and Reports
+
+The project includes web interface components and backend functionality intended to support:
+
+* Attendance review
+* Classroom event monitoring
+* Alerts
+* Analytics
+* PDF report generation
+
+Available functionality depends on the current application configuration.
+
+## 🧠 How the System Works
+
+```mermaid
+flowchart TD
+    A[Camera Input] --> B[Frame Processing with OpenCV]
+    B --> C[Face Detection using YuNet]
+    C --> D[Face Recognition using SFace]
+    B --> E[Mobile Phone Detection using YOLOv8]
+    B --> F[Facial Landmark Analysis using MediaPipe]
+    D --> G[Attendance Processing]
+    E --> H[Phone Detection Events]
+    F --> I[Drowsiness Indicators]
+    G --> J[Flask Backend and Application Logic]
+    H --> J
+    I --> J
+    J --> K[SQLite Database]
+    J --> L[Web Interface]
+    J --> M[Alerts and PDF Reports]
+```
+
+### Processing Pipeline
+
+1. **Capture:** Obtain frames from a configured camera source.
+2. **Analyze:** Process frames using the relevant computer vision models.
+3. **Recognize:** Compare detected faces against enrolled student references.
+4. **Monitor:** Detect mobile phones and analyze facial landmarks.
+5. **Record:** Process attendance and relevant monitoring events.
+6. **Present:** Make supported information available through the web interface and reports.
+
+## 🛠️ Technology Stack
+
+### AI and Computer Vision
+
+* Python
+* OpenCV
+* YuNet
+* SFace
+* YOLOv8
+* MediaPipe Face Mesh
+* NumPy
+
+### Backend and Data
+
+* Flask
+* Flask-CORS
+* SQLite
+
+### Frontend and Visualization
+
+* HTML
+* CSS
+* JavaScript
+* Chart.js
+
+### Reporting and Development
+
+* FPDF2
+* Git
+* GitHub
+* Visual Studio Code
+
+*React.js should be listed as an implemented technology only if the current application actually uses it.*
+
+## 📁 Project Structure
 
 ```text
 Smart-Attendance-and-Student-Monitoring-System/
+│
+├── .github/
+│   └── ISSUE_TEMPLATE/
 │
 ├── final_year_project-main-main-main/
 │   ├── backend/
@@ -98,24 +188,27 @@ Smart-Attendance-and-Student-Monitoring-System/
 │   ├── deploy.prototxt
 │   └── haarcascade_frontalface_default.xml
 │
-└── README.md
+├── .gitignore
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+└── SECURITY.md
 ```
 
-*Note: This structure highlights the main files currently included in the repository. Additional files may exist in the local project.*
+*This tree highlights the main tracked files and may not include every file in your local working directory.*
 
-## ⚙️ Prerequisites
+## ⚙️ Getting Started
 
-Install the following software before running the project:
+### Prerequisites
 
-* Python 3.11 (or the version supported by your installed dependencies)
+Before running the project, prepare:
+
+* Python 3.11 or a compatible version
 * Git
-* Visual Studio Code or another Python editor
-* A webcam or compatible camera source
-* Required Python packages listed in `requirements.txt`
-
-Some computer vision features also require compatible model files. These model files are not included in the GitHub repository and must be obtained separately from their official sources or your original project setup.
-
-## 🚀 Installation and Setup
+* A compatible webcam or configured camera source
+* The required Python dependencies
+* The model files referenced by the application
 
 ### Step 1: Clone the Repository
 
@@ -123,7 +216,7 @@ Some computer vision features also require compatible model files. These model f
 git clone https://github.com/Akashbs-06/Smart-Attendance-and-Student-Monitoring-System.git
 ```
 
-### Step 2: Open the Project Folder
+### Step 2: Enter the Application Directory
 
 ```bash
 cd Smart-Attendance-and-Student-Monitoring-System/final_year_project-main-main-main
@@ -148,83 +241,125 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-If installation fails, check the Python version and package versions specified by the project dependencies.
+### Step 5: Prepare the Model Files
 
-### Step 5: Configure Required Model Files
+Download or restore the computer vision models required by the source code from their trusted sources.
 
-Download or restore the required computer vision model files and place them in the paths expected by the application.
+Place each model at the path expected by the application.
 
-Examples of model files used by this project include:
-
-* YOLOv8 model weights
-* YuNet face detection model
-* SFace face recognition model
-* SSD face detection model, if required by the implementation
-
-Model filenames and paths must match those referenced in the source code.
+The `.gitignore` rules exclude certain model formats and weights, so a fresh clone may not contain all the required models.
 
 ### Step 6: Configure the Camera
 
-Connect a compatible webcam or configure your Android phone webcam application.
+Connect a compatible webcam or configure your supported Android phone webcam application.
 
-Ensure that the camera source and permissions are correctly configured before running the application.
+Ensure that the camera source configured in the application matches the available device.
 
-### Step 7: Start the Application
+### Step 7: Run the Application
 
-Run the main application:
+From the application directory:
 
 ```bash
 python main.py
 ```
 
-The exact startup procedure may vary depending on the application's current configuration. If the Flask backend must be started separately, follow the instructions implemented in `backend/app.py`.
+If the backend requires separate startup, consult the configuration and startup logic in `backend/app.py`.
 
-## 🖥️ How It Works
+**Note:** The commands above describe the general setup. Exact dependency compatibility, model paths, and startup requirements should be verified against the current source code.
 
-1. The camera captures classroom frames.
-2. The face detection module identifies faces in the frames.
-3. The face recognition module attempts to identify enrolled students.
-4. Attendance information is recorded according to the application's configured rules.
-5. The YOLOv8 module detects mobile phones.
-6. The drowsiness module analyzes facial landmarks and eye movements.
-7. Monitoring events are recorded and used to calculate engagement scores.
-8. Teachers and administrators can review the available dashboard information and reports.
+## 🖼️ Application Screenshots
 
-## 🔒 Privacy and Security
+Screenshots from the actual running application will be added here.
 
-* Student photographs and attendance records should be stored securely.
-* Do not commit student photographs, database files, attendance records, or generated reports to a public repository.
-* Never upload passwords, SMTP credentials, API keys, or other secrets.
-* Configure credentials through environment variables or a local `.env` file that is excluded from Git.
-* Obtain appropriate permission before collecting or processing student facial data.
-* Follow applicable privacy, institutional, and data protection requirements.
+Create a `screenshots` folder in the repository root and add genuine application screenshots.
 
-## ⚠️ Limitations
+Recommended files:
 
-* Face recognition accuracy depends on lighting, camera quality, face orientation, and the enrolled reference images.
-* Mobile phone detection depends on the model, image quality, and detection thresholds.
-* Drowsiness detection is an estimate and should not be treated as a medical assessment.
-* Engagement scores are indicators based on implemented rules and should not be considered definitive measurements of student attention.
-* A compatible camera and the required model files must be available for the corresponding features to work.
+```text
+screenshots/
+├── attendance-dashboard.png
+├── face-recognition.png
+└── monitoring-alerts.png
+```
 
-## 🔮 Future Enhancements
+Once these images have been added and pushed to GitHub, display them using:
 
-* Develop a more comprehensive React-based monitoring dashboard.
-* Add role-based access control for teachers and administrators.
-* Improve face recognition under different lighting conditions.
-* Add cloud deployment and secure database backup.
-* Improve analytics and attendance visualization.
-* Add configurable alerts and notification settings.
-* Provide automated testing and deployment workflows.
+```markdown
+## Attendance Dashboard
+
+![Attendance Dashboard](screenshots/attendance-dashboard.png)
+
+## Face Recognition
+
+![Face Recognition](screenshots/face-recognition.png)
+
+## Classroom Monitoring Alerts
+
+![Monitoring Alerts](screenshots/monitoring-alerts.png)
+```
+
+Do not use sample or generated images as evidence of features running in the actual application.
+
+## 🔐 Privacy and Responsible Use
+
+Because this project can process facial images and classroom activity information:
+
+* Keep student photographs and personal information private.
+* Never commit passwords, API keys, or email credentials.
+* Do not publish identifiable attendance records or private databases.
+* Obtain appropriate authorization before collecting facial data.
+* Restrict access to sensitive records.
+* Use anonymized data for demonstrations whenever possible.
+* Follow applicable institutional and data protection requirements.
+
+## ⚠️ Current Limitations
+
+* Recognition performance depends on image quality, lighting, and face orientation.
+* Phone detection depends on model quality and detection thresholds.
+* Drowsiness indicators may produce false positives or false negatives.
+* Engagement estimates depend on the application's configured logic.
+* Required model files and camera configuration may need additional setup.
+* Production deployment requires an appropriate security and privacy review.
+
+## 🔮 Future Scope
+
+Potential areas for further development include:
+
+* A more comprehensive React-based dashboard, if adopted
+* Role-based access control
+* Improved recognition under challenging lighting
+* More detailed attendance analytics
+* Automated testing and deployment
+* Secure backups and deployment configuration
+* Configurable notifications and alert management
+* Improved documentation and setup automation
 
 ## 👨‍💻 Author
 
 **Akash B S**
 
-Engineering Student | Software Development and Artificial Intelligence
+Engineering Student | Artificial Intelligence | Computer Vision | Software Development
 
-GitHub: [Akashbs-06](https://github.com/Akashbs-06)
+GitHub: [@Akashbs-06](https://github.com/Akashbs-06)
 
-## 📄 License
+## 🤝 Contributing
 
-A license has not yet been specified. Add an appropriate open-source license if you intend to permit others to reuse, modify, or distribute this project.
+Contributions, bug reports, and suggestions are welcome.
+
+Please review [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a contribution.
+
+For security-related concerns, see [SECURITY.md](SECURITY.md).
+
+## 📜 License
+
+This repository includes an MIT License file. Review the [LICENSE](LICENSE) file for the applicable terms.
+
+---
+
+<div align="center">
+
+**ClassSentinel AI — Exploring smarter classroom monitoring with computer vision.**
+
+⭐ If you find this project interesting, consider starring the repository.
+
+</div>
