@@ -1,0 +1,23 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# AI models
+*.pt
+*.onnx
+*.caffemodel
+*.invalid
+
+# Private student data
+student_photos/
+**/student_photos/
+attendance.csv
+*.db
+reports/
+**/reports/
+frontend/live_frame.jpg
+
+# Secrets
+.env
